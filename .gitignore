@@ -1,3 +1,9 @@
+# sizzle
+secret.py
+private.py
+
+# Included by github
+#
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

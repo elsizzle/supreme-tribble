@@ -1,0 +1,20 @@
+alias meow='cat'
+alias ll='ls -la'
+alias ..='cd ..'
+alias ...='cd .. ; cd ..'
+
+export PATH=$PATH:/home/sizzle/bin
+export EDITOR=vi
+
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# powered by newsapi.org
+getnews () {
+   curl https://newsapi.org/v2/top-headlines -s -G \
+      -d sources=$1 \
+      -d apiKey=apikeyhere \
+   | jq '.articles[] | .title'
+}
