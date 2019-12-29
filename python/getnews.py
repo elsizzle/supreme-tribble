@@ -15,9 +15,16 @@ def main() :
    newsapi = NewsApiClient(api_key=newsapikey)
 
    # /v2/top-headlines
-   r = newsapi.get_top_headlines(q=args.query, language='en')
+   #r = newsapi.get_top_headlines(q=args.query, language='en')
+   #print(r)
 
+   r = newsapi.get_sources()
    print(r)
+
+   #newsapi.get_sources(category="technology")
+   #newsapi.get_sources(country="us")
+   #newsapi.get_sources(category="health", country="us")
+   #newsapi.get_sources(language="en", country="in")
 
 if __name__ == "__main__" : 
     main()
