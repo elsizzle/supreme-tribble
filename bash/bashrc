@@ -3,6 +3,9 @@ alias ll='ls -la'
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 
+alias jupyter-start='/usr/bin/jupyter-notebook ~/jupyter/ &'
+alias jupyter-stop='/bin/kill $(pgrep jupyter)'
+
 export PATH=$PATH:/home/sizzle/bin
 export EDITOR=vi
 
